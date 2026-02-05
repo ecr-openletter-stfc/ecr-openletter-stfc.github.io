@@ -56,17 +56,43 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									
 									<ul class="actions special">
 									<h2>Open Letter</h2>
 									</ul>
 								</header>
+								<header class="major">
+									<ul class="actions special">
+								<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+									<div class="led-counter">
+									Signature Count:<span id="ledCount">000</span>
+									</div>
+									<script>
+									const target = 353;
+									const el = document.getElementById("ledCount");
+									const start = performance.now();
+									const duration = 1200;
+
+									function animate(t) {
+										const p = Math.min((t - start) / duration, 1);
+										el.textContent = Math.floor(p * target).toString().padStart(3, "0");
+										if (p < 1) requestAnimationFrame(animate);
+									}
+
+									requestAnimationFrame(animate);
+									</script>
+									</ul>
+									</header>
+									<p></p>
 									<ul class="actions special">
 									<a href="#sign-form" class="button large">
  									 Sign the open letter
 									</a>
+									
 									</ul>
-								
+									
+									
+
+
 
 									<p>We write as early-career researchers within the Particle Physics, Astronomy and Nuclear physics (PPAN) community from across the United Kingdom (UK), in response to recent announcements on UK Research and Innovation’s investment approach and the emerging funding architecture for the 2026–2030 period. UKRI has set out a transition toward a more focused, outcomes-driven funding model, alongside statements that overall investment is rising and that curiosity-driven research remains protected.</p>
 
@@ -91,7 +117,7 @@
 									<p>We are particularly concerned about the effects of funding uncertainty and delays on early-career researchers. Uncertainty around the timing and stability of postdoctoral recruitment is already influencing career decision-making. In funding systems that emphasise flexibility, dynamic allocation, and programme-level adjustment, early-career positions frequently become the primary mechanism through which uncertainty is absorbed.</p>
 									
 									<p>This disproportionately affects early-career researchers, who are uniquely mobile. When career pathways collapse or appear insecure, they do not pause their work; they relocate, often permanently, to systems with clearer long-term commitments to discovery science. Once dispersed internationally, this talent cannot be rapidly reassembled in future funding cycles. The consequences of this attrition extend far beyond academia, it:</p>
-									<ul>
+									<ul text-align="left">
 										<li>removes the next generation of research leaders and educators before they can establish UK-based programmes;</li>
 										<li>weakens the pipeline into industry, defence, and emerging technology sectors;</li>
 										<li>erodes the UK's influence within international scientific collaborations and research infrastructure;</li>
@@ -223,7 +249,11 @@
 								
 							</section>
 								
-								<h2>Sign The Letter</h2>
+								<header class="major">
+									<ul class="actions special">
+										<h2>Sign The Letter</h2>
+									</ul>
+								</header>
 								<p>By signing below, I confirm that I am happy for my name and institution to appear in the list of signatories and on the letter to the aforementioned receipients.</p>
 								<section id="sign-form">
 							<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeJE2_v7yjHi6p2L50hI-3hrf8nEJ57jU3TyQpPfpJrvcy5cg/formResponse?">
